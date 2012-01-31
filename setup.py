@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name='cmsplugin-userprofiles',
-    version=cmsplugin_userprofiles.__version__,
+    version=".".join(cmsplugin_userprofiles.__version__),
     classifiers = (
         'Development Status :: 4 - Beta',
         'Framework :: Django',
