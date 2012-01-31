@@ -1,0 +1,7 @@
+virtualenv ./environ --distribute
+...
+ <do django project creation here>
+...
+pip install git+git://github.com/airtonix/cmsplugin-userprofiles/
+./manage.py migrate cmsplugin_userprofiles
+./manage.py runserver 0:8000

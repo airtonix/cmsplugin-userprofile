@@ -1,0 +1,15 @@
+{% extends "cms/plugin-base.html" %}
+{% load i18n sekizai_tags %}
+{% block plugin-type %}userprofile-list profile-list-bulleted{% endblock %}
+{% block plugin-id %}{{ instance }}{% endblock %}
+{% block plugin-placeholder %}{{ placeholder }}{% endblock %}
+{% block plugin-content %}
+	<h3>{{ plugin.instance.group_title }}</h3>
+	<ul>
+	{% for User in Users %}
+		{% include plugin.instance.item_template %}
+	{% empty %}
+		<li class="alert-message">Group is empty</li>
+	{% endfor %}
+	</ul>
+{% endblock %}

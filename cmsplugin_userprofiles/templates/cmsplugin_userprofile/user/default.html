@@ -1,0 +1,16 @@
+{% load cms_tags sekizai_tags %}{% spaceless %}
+{% addtoblock 'css' %}<link type="text/css"
+                            rel='stylesheet/less'
+                            media='screen,projector'
+                            href='{{STATIC_URL}}css/cmsplugin-userprofile.less' />{% endaddtoblock %}
+
+<div id="{{ plugin.id_attr }}" class="cmsplugin cmsplugin-userprofile">
+  <div class="avatar">
+    {% if plugin.instance.show_avatar %}
+    <img src="{{ plugin.instance.user.getprofile.avatar }}" />
+    {% endif %}
+  </div>
+  <div class="user-bio">
+    {{ plugin.instance.user.getprofile.bio|safe }}
+  </div>
+</div>{% endspaceless %}

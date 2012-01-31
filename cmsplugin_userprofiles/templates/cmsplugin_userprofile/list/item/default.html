@@ -1,0 +1,13 @@
+{% extends "cms/plugin-base.html" %}
+{% load i18n sekizai_tags %}
+{% block plugin-type %}userprofile-list{% endblock %}
+{% block plugin-id %}{{ instance }}{% endblock %}
+{% block plugin-placeholder %}{{ placeholder }}{% endblock %}
+{% block plugin-content %}
+  <div class="user-name">
+    <span class="title">{{ User.getprofile.title }}</span>
+    <span class="firstname">{{ User.first_name }}</span>
+    <span class="lastname">{{ User.last_name }}</span>
+  </div>
+</div>
+{% endblock %}

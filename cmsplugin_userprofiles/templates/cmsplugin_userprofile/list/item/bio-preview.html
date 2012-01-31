@@ -1,0 +1,26 @@
+{% load cms_tags sekizai_tags thumbnail %}
+{% with User.get_profile as Profile %}
+{% spaceless %}
+	<div class="avatar">
+		<img src="{% thumbnail Profile.avatar 128x256 %}" />
+		<div class="profile-links">
+			{% for link in Profile.userprofilelinks_set.all %}
+				<a href="{{ link.url }}" alt="{{ link.name }}">
+					{% if link.show_icon %}
+						<img src="{% thumbnail link.type.icon 32x32 %}" />
+					{% else %}
+						{{ link.name }}
+					{% endif %}
+					</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="user-bio">
+		<h4 class="person-name"><a href="{{Profile.get_absolute_url}}">
+			<span class="first_name">{{ User.first_name }}</span>
+			<span class="last_name">{{ User.last_name }}</span>
+			<small class="title">{{ Profile.title }}</small></a>
+		</h4>
+		<p>{{ Profile.bio|safe }}</p>
+	</div>{% endspaceless %}
+{% endwith %}

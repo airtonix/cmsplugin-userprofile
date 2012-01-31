@@ -1,0 +1,14 @@
+{% extends "cms/plugin-base.html" %}
+{% load i18n sekizai_tags %}
+{% block plugin-type %}userprofile-list{% endblock %}
+{% block plugin-id %}{{ instance }}{% endblock %}
+{% block plugin-placeholder %}{{ placeholder }}{% endblock %}
+{% block plugin-content %}
+	{% for User in Users %}
+		<div id="cmsplugin-userlist-item-{{ User.id }}" class="list-item">
+		{% include plugin.instance.item_template %}
+		</div>
+	{% empty %}
+		<p>Group is empty</p>
+	{% endfor %}
+{% endblock %}

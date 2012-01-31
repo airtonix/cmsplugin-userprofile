@@ -1,0 +1,8 @@
+{% load cms_tags sekizai_tags %}{% spaceless %}
+<li id="cmsplugin-userlist-item-{{ User.id }}" class="list-item">
+	<a href="{{ User.get_profile.get_absolute_url }}">
+		<span class="title">{{ User.getprofile.title }}</span>
+		<span class="firstname">{{ User.first_name }}</span>
+		<span class="lastname">{{ User.last_name }}</span>
+	</a>
+</li>{% endspaceless %}
