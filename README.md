@@ -20,9 +20,9 @@ This allows for a great deal of theming flexibility post-deployment.
 
 1. make sure you are using a python virtual environment
 
-	 virtualenv ~/Dev/virtualenv/projectname;
-	 . ~/Dev/virtualenv/projectname/bin/activate;
-	 cd ~/Dev/projects/projectname/;
+	virtualenv ~/Dev/virtualenv/projectname;
+	. ~/Dev/virtualenv/projectname/bin/activate;
+	cd ~/Dev/projects/projectname/;
 
 2. install it from pypi
 
