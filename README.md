@@ -86,7 +86,7 @@ is `plugin.instance` a reference to the settings model.
 
 #### base.html
 
-base.html in the `cmsplugin_configurableproduct` directory is used to load the
+base.html in the `cmsplugin_userprofile` directory is used to load the
 selected template chosen in the administration interface.
 
 
@@ -114,6 +114,5 @@ github : http://github.com/airtonix/cmsplugin-userprofiles
 
 provide option to manipulate menu choices:
 
-* Refine the product filter.
 * Provide better default templates.
 * Allow selecting/use of snippets for menu templates?
