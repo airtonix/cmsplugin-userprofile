@@ -24,6 +24,8 @@ setup(
     packages=find_packages(),
     install_requires=(
         'django-cms',
+        'django-registration',
+        'django-profiles',
     ),
     author='Zenobius Jiricek',
     author_email='airtonix@gmail.com',
